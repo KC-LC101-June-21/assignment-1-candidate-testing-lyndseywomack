@@ -35,7 +35,9 @@ function gradeQuiz(candidateAnswers) {
 // } else {
 //   console.log("Good try! Maybe google it and come back later... :)" );
 // }
-for (let i=0; i<questions.length; i++){}
+for (let i=0; i<questions.length; i++){
+  console.log(`${i+1}. ${questions[i]} \n Your Answer: ${candidateAnswers[i]} \n The Correct Answer: ${correctAnswers[i]}`);
+}
 
 
   let grade;
