@@ -14,12 +14,11 @@ let correctAnswers = ["Sally Ride", "true", "40", "Trajectory", "3"]
 let candidateAnswers = []
 let numberOfCorrectAnswers = 0
 
-
-
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
 candidateName = input.question("What is your name? ");
 }
+
 function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 for (let i=0; i<questions.length; i++){
@@ -27,8 +26,9 @@ candidateAnswer = input.question(questions[i]);
 candidateAnswers.push(candidateAnswer);
   }
 }
+
 function gradeQuiz(candidateAnswers) {
-  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly 
 for (let i=0; i<questions.length; i++){
   console.log("Candidate Name: ", candidateName);
   console.log(`${i+1}) ${questions[i]} \n Your Answer: ${candidateAnswers[i]} \n The Correct Answer: ${correctAnswers[i]}`);
@@ -36,7 +36,6 @@ for (let i=0; i<questions.length; i++){
       numberOfCorrectAnswers = numberOfCorrectAnswers + 1;
   } 
 }
-  
   let grade = (numberOfCorrectAnswers / correctAnswers.length * 100)
   console.log(`>>>  Overall Grade: ${grade}% (${numberOfCorrectAnswers} out of 5 correct)  <<<`);
   if (grade >= 80){
