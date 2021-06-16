@@ -25,12 +25,10 @@ function askQuestion() {
 for (let i=0; i<questions.length; i++){
 candidateAnswer = input.question(questions[i]);
 candidateAnswers.push(candidateAnswer);
-}
-
+  }
 }
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
 for (let i=0; i<questions.length; i++){
   console.log("Candidate Name: ", candidateName);
   console.log(`${i+1}) ${questions[i]} \n Your Answer: ${candidateAnswers[i]} \n The Correct Answer: ${correctAnswers[i]}`);
@@ -47,10 +45,7 @@ for (let i=0; i<questions.length; i++){
     console.log('>>>  STATUS: Failed  <<<')
   }
   return grade
-
 }
-
-
 
 function runProgram() {
   askForName();
