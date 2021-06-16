@@ -16,7 +16,7 @@ let numberOfCorrectAnswers = 0
 
 function askForName() {
   // TODO 1.1b: Ask for candidate's name //
-candidateName = input.question("What is your name? ");
+candidateName = input.question("Candidate Name: ");
 }
 
 function askQuestion() {
@@ -26,11 +26,9 @@ candidateAnswer = input.question(questions[i]);
 candidateAnswers.push(candidateAnswer);
   }
 }
-
 function gradeQuiz(candidateAnswers) {
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly 
 for (let i=0; i<questions.length; i++){
-  console.log("Candidate Name: ", candidateName);
   console.log(`${i+1}) ${questions[i]} \n Your Answer: ${candidateAnswers[i]} \n The Correct Answer: ${correctAnswers[i]}`);
     if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()){
       numberOfCorrectAnswers = numberOfCorrectAnswers + 1;
@@ -49,11 +47,10 @@ for (let i=0; i<questions.length; i++){
 function runProgram() {
   askForName();
   // TODO 1.1c: Ask for candidate's name //
-  // console.log("Hey there, " + candidateName + " please answer the questions below.");
   askQuestion();
+  console.log("Candidate Name: ", candidateName);
   gradeQuiz(this.candidateAnswers);
 }
-
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
 module.exports = {
